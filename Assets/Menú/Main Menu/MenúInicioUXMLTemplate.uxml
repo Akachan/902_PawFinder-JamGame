@@ -15,7 +15,7 @@
                         <ui:Button text="Play" display-tooltip-when-elided="true" name="Play" class="buttons" />
                         <ui:Button text="Controls" display-tooltip-when-elided="true" name="Controls" class="buttons" />
                         <ui:Slider picking-mode="Ignore" label="Volume" value="42" high-value="100" name="Volume" class="volume" />
-                        <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" class="buttons" />
+                        <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" class="buttons invisible" />
                         <ui:Label text="Loading..." display-tooltip-when-elided="true" name="Loading" class="invisible" style="font-size: 20px;" />
                     </ui:VisualElement>
                     <ui:VisualElement name="DerContenedorMenu" style="flex-grow: 1;" />

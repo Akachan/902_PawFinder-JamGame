@@ -133,7 +133,7 @@ public class MenuPausa : MonoBehaviour
     }
 
 
-    //Config Button *****************************
+    //Controls Button *****************************
     private void ControlsButtonClick(ClickEvent evt)
     {
 
@@ -211,6 +211,7 @@ public class MenuPausa : MonoBehaviour
     }
 
 
+    //Vista de controles
     public void SetControlsView() 
     {   
         SetInvisible(menuCont);
@@ -221,6 +222,7 @@ public class MenuPausa : MonoBehaviour
         isInControlsMenu = true;
         
         exit.Focus();
+
     }
     public void RemoveControlsView()
     {
@@ -231,16 +233,21 @@ public class MenuPausa : MonoBehaviour
 
         isInControlsMenu = false;
 
-        continueButton.Focus();    
+        controls.Focus();    
     }
 
-    public void EscapeMenu()
+
+
+    public bool EscapeMenu()
     {
         if(isInControlsMenu)
         {
             mPEvents.ClearOnSelect();
             RemoveControlsView();
+            return true;
         }
+        return false;
+        
     }
 
     public void VolumeModifier(float value)

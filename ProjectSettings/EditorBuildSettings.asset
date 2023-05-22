@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Scenes/Men\xFAInicio.unity"
+    path: Assets/Scenes/MenuInicio.unity
     guid: 39de2d46bfb92dc49ac87fe51012ae2e
   - enabled: 1
     path: Assets/Scenes/PawFinderMainGame.unity

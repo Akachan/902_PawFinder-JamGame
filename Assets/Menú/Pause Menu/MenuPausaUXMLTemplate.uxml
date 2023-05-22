@@ -2,8 +2,8 @@
     <Style src="project://database/Assets/Men%C3%BA/Pause%20Menu/MenuPausaUSSFile.uss?fileID=7433441132597879392&amp;guid=70bac9d2facebdd4eb619af0bb64b6b2&amp;type=3#MenuPausaUSSFile" />
     <ui:VisualElement name="GralContenedor" class="contenedor" style="background-image: none; -unity-background-scale-mode: scale-and-crop;">
         <ui:VisualElement name="ContCont" class="contenedor">
-            <ui:VisualElement name="ExitCont" class="exitCont invisible" style="width: 100%;">
-                <ui:Button text="Exit" display-tooltip-when-elided="true" name="Exit" class="exitButton" />
+            <ui:VisualElement name="ExitCont" class="exitCont invisible">
+                <ui:Button text="Exit" name="Exit" class="exitButton" />
             </ui:VisualElement>
             <ui:VisualElement name="MenuContenedor" class="contenedor">
                 <ui:VisualElement name="Encabezado" class="titulo encabezado invisible">
@@ -12,11 +12,12 @@
                 <ui:VisualElement name="Contenido" class="contenido" style="flex-direction: row;">
                     <ui:VisualElement name="IzqContenedorMenu" class="contLaterales" />
                     <ui:VisualElement name="CenContenedorMenu" class="contCentral">
+                        <ui:Label text="PAUSE" display-tooltip-when-elided="true" name="PauseLabel" class="tituloTxt pauseText" style="padding-bottom: 20px; justify-content: flex-start;" />
                         <ui:Button text="Continue" display-tooltip-when-elided="true" name="Continue" class="buttons" />
-                        <ui:Button text="Restart" display-tooltip-when-elided="true" name="Restart" class="buttons invisible" />
+                        <ui:Button text="Restart" display-tooltip-when-elided="true" name="Restart" class="buttons" style="display: none; overflow: visible;" />
                         <ui:Button text="Controls" display-tooltip-when-elided="true" name="Controls" class="buttons" />
                         <ui:Slider picking-mode="Ignore" label="Volume" value="42" high-value="100" name="Volume" class="volume" />
-                        <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" class="buttons" />
+                        <ui:Button text="To Main Menu" display-tooltip-when-elided="true" name="Quit" class="buttons" />
                     </ui:VisualElement>
                     <ui:VisualElement name="DerContenedorMenu" style="flex-grow: 1;" />
                 </ui:VisualElement>

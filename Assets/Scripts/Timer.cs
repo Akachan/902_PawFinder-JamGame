@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     [SerializeField] float superFastTimeSpeed = 2f;
     float currentTime;
     float timeSpeed;
+    float previousTimeSpeed;
     
     
     void Start()
@@ -46,8 +47,25 @@ public class Timer : MonoBehaviour
             case 2:
                 timeSpeed = superFastTimeSpeed;
                 break;
+            case 3:
+                timeSpeed = 0f;
+                break;
             
         }
 
+    }
+
+    public void StopTime(bool state)
+    {
+        
+        if(state)
+        {
+            previousTimeSpeed = timeSpeed;
+            ChangeTimeSpeed(3);
+        }
+        else
+        {
+            timeSpeed = previousTimeSpeed;
+        }
     }
 }

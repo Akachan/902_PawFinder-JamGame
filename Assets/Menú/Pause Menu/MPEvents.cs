@@ -48,7 +48,7 @@ public class MPEvents : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("queres salir del juego");
-        Application.Quit();
+        SceneManager.LoadScene("MenuInicio");
     }
 
     public void EscapeMenu()
