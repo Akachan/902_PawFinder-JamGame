@@ -13,7 +13,7 @@
                     <ui:VisualElement name="IzqContenedorMenu" class="contLaterales" />
                     <ui:VisualElement name="CenContenedorMenu" class="contCentral">
                         <ui:Button text="Continue" display-tooltip-when-elided="true" name="Continue" class="buttons" />
-                        <ui:Button text="Restart" display-tooltip-when-elided="true" name="Restart" class="buttons" />
+                        <ui:Button text="Restart" display-tooltip-when-elided="true" name="Restart" class="buttons invisible" />
                         <ui:Button text="Controls" display-tooltip-when-elided="true" name="Controls" class="buttons" />
                         <ui:Slider picking-mode="Ignore" label="Volume" value="42" high-value="100" name="Volume" class="volume" />
                         <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" class="buttons" />

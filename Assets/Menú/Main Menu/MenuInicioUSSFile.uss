@@ -5,6 +5,7 @@ VisualElement {
     display: flex;
     width: 100%;
     height: 100%;
+    background-color: rgba(26, 5, 5, 0);
 }
 
 .encabezado {
@@ -27,7 +28,10 @@ VisualElement {
     width: 100%;
     height: 90%;
     -unity-text-align: middle-center;
-    font-size: 50px;
+    font-size: 80px;
+    -unity-font-style: bold;
+    white-space: normal;
+    color: rgba(255, 255, 255, 255);
 }
 
 .pieTxt {
@@ -80,10 +84,10 @@ VisualElement {
 }
 
 .controls {
-    background-image: url('project://database/Assets/Men%C3%BA/Controles.png?fileID=2800000&guid=0f2d291f7d90fab468b56449d04e793d&type=3#Controles');
+    background-image: url('project://database/Assets/Men%C3%BA/Main%20Menu/Controles.png?fileID=2800000&guid=0f2d291f7d90fab468b56449d04e793d&type=3#Controles');
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgba(110, 180, 200, 0.61);
-    background-color: rgba(0, 0, 0, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 .exitControls {
@@ -98,4 +102,12 @@ VisualElement {
 .unity-base-slider__label {
     width: 30%;
     min-width: 30%;
+}
+
+.Background {
+    background-color: rgba(61, 51, 65, 255);
+}
+
+.unity-text-element {
+    color: rgba(255, 255, 255, 255);
 }

@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PauseInput : MonoBehaviour, Control.IPauseActions
 {
     [SerializeField] GameObject menuPausa;
-    [SerializeField] PlayerInput playerInput;
+    [SerializeField] InputCelu playerInput;
     [SerializeField] UIInputsMP uIInput;
     Control control;
 

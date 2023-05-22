@@ -18,6 +18,7 @@ public class MenuInicio : MonoBehaviour
     Button quit;
     Button exit;
     Slider volume;
+    Label loading;
     VisualElement menuCont;
     VisualElement contCont;
     VisualElement exitCont;
@@ -55,6 +56,10 @@ public class MenuInicio : MonoBehaviour
         volume.lowValue = 0.001f;
         volume.highValue = 1f;
         volume.value = initialVolume;
+        
+        loading = root.Q<Label>("Loading");
+
+
 
         //EVENTOS
         
@@ -228,6 +233,15 @@ public class MenuInicio : MonoBehaviour
             volume.value += hopVolume * value * Time.deltaTime;
             audioController.SetVolume(volume.value);
         }
+    }
+
+    public void LoadingMessage()
+    {
+        SetInvisible(play);
+        SetInvisible(controls);
+        SetInvisible(volume);
+        SetInvisible(quit);
+        SetVisible(loading);
     }
 
 

@@ -33,6 +33,7 @@ public class MIEvents : MonoBehaviour
     public void NewGame()
     {
         Debug.Log("querés empezar un nuevo juego");
+        menuInicio.LoadingMessage();
         SceneManager.LoadScene("PawFinderMainGame");
     }
 
