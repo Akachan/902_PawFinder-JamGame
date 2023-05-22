@@ -1,0 +1,110 @@
+VisualElement {
+}
+
+.contenedor {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.encabezado {
+    width: 100%;
+    height: 25%;
+}
+
+.contenido {
+    flex-grow: 1;
+}
+
+.pie {
+    width: 100%;
+    height: 25%;
+}
+
+.tituloTxt {
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 90%;
+    -unity-text-align: middle-center;
+    font-size: 50px;
+}
+
+.pieTxt {
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    -unity-text-align: middle-center;
+    font-size: 20px;
+}
+
+.contLaterales {
+    flex-grow: 1;
+}
+
+.contCentral {
+    flex-grow: 0;
+    width: 20%;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.32);
+    justify-content: space-around;
+}
+
+.buttons {
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    height: 30px;
+}
+
+.volume {
+    height: auto;
+    align-items: stretch;
+    justify-content: space-around;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    -unity-slice-left: 0;
+    -unity-slice-right: 0;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    flex-direction: row;
+}
+
+.invisible {
+    display: flex;
+    visibility: hidden;
+    overflow: visible;
+    opacity: 1;
+}
+
+.controls {
+    background-image: url('project://database/Assets/Men%C3%BA/Main%20Menu/Controles.png?fileID=2800000&guid=0f2d291f7d90fab468b56449d04e793d&type=3#Controles');
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgba(110, 180, 200, 0.61);
+    background-color: rgb(0, 0, 0);
+}
+
+.exitCont {
+    width: 40px;
+    height: 20px;
+    opacity: 1;
+}
+
+.unity-base-slider__drag-container {
+}
+
+.unity-base-slider__label {
+    width: 30%;
+    min-width: 30%;
+}
+
+.exitButton {
+    width: 50px;
+}

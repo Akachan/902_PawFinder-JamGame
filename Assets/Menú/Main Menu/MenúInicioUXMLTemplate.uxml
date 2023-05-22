@@ -1,0 +1,28 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Men%C3%BA/MenuInicioUSSFile.uss?fileID=7433441132597879392&amp;guid=9ff27031ed80d1849927bee4b2d4d460&amp;type=3#MenuInicioUSSFile" />
+    <ui:VisualElement name="GralContenedor" class="contenedor" style="background-image: none; -unity-background-scale-mode: scale-and-crop;">
+        <ui:VisualElement name="ContCont" class="contenedor">
+            <ui:VisualElement name="ExitCont" style="visibility: visible;">
+                <ui:Button name="Exit" text="Exit" display-tooltip-when-elided="true" class="buttons exitControls" />
+            </ui:VisualElement>
+            <ui:VisualElement name="MenuContenedor" class="contenedor">
+                <ui:VisualElement name="Encabezado" class="titulo encabezado">
+                    <ui:Label text="TITULO" display-tooltip-when-elided="true" class="tituloText tituloTxt" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Contenido" class="contenido" style="flex-direction: row;">
+                    <ui:VisualElement name="IzqContenedorMenu" class="contLaterales" />
+                    <ui:VisualElement name="CenContenedorMenu" class="contCentral">
+                        <ui:Button text="Play" display-tooltip-when-elided="true" name="Play" class="buttons" />
+                        <ui:Button text="Controls" display-tooltip-when-elided="true" name="Controls" class="buttons" />
+                        <ui:Slider picking-mode="Ignore" label="Volume" value="42" high-value="100" name="Volume" class="volume" />
+                        <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" class="buttons" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="DerContenedorMenu" style="flex-grow: 1;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Pie" class="pie">
+                    <ui:Label text="pie del menú" display-tooltip-when-elided="true" name="Label" class="tituloText tituloTxt pieTxt" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
