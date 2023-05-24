@@ -10,6 +10,7 @@ public class CellphoneMover : MonoBehaviour
     [SerializeField] Transform upPos; 
     [SerializeField] float speed = 1f;
     [SerializeField] StarterAssetsInputs starterAssetsInputs;
+    [SerializeField] GameObject batteryPanel;
 
     AppController appController;
 
@@ -32,7 +33,7 @@ public class CellphoneMover : MonoBehaviour
     
     void Start()
     {
-        
+        batteryPanel.SetActive(false);
 
     }
 
@@ -67,7 +68,7 @@ public class CellphoneMover : MonoBehaviour
 
     public void initialMove()
     {
-        initialPos= transform.rotation;
+        initialPos = transform.rotation;
         if(isUp)
         {
             //el celular que estaba arriba se apaga y baja por lo tanto aca debería cambiar las velocidad de consumo 0
@@ -93,7 +94,9 @@ public class CellphoneMover : MonoBehaviour
     private void SetCellOn()
     {
         timer.ChangeTimeSpeed(1);
+        batteryPanel.SetActive(true);
         isOn = true;
+        
 
         //desencadenar animacion de prendido del celular (aparecen iconos o algo asi)
     }
@@ -101,7 +104,9 @@ public class CellphoneMover : MonoBehaviour
     {
         timer.ChangeTimeSpeed(0);
         appController.PawFinderOff();
+        batteryPanel.SetActive(false);
         isOn = false;
+        
         
         //desencadenar animacion de apagado de celular, la pantalla se vuelve negra
     }
