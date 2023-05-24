@@ -6,34 +6,49 @@ public class BatterySystem : MonoBehaviour
 {
 
     [SerializeField] float initialBattery = 20f;
-    [SerializeField] float firtsNotification = 15f;
-    [SerializeField] float secondNotification = 10f;
-
-    [SerializeField] float thirdNotification = 5f;
-    [SerializeField] float lastNotification =2f;
+    [SerializeField] List<float> batteryPercentNotifications = new List<float>();
 
     Timer timer;
     BatteryPanel batteryPanel;
+    BatteryNotifications batteryNotifications;
     float currentBattery;
+    int currentFase = 0;
 
     private void Awake() 
     {
         timer = GetComponent<Timer>();
         batteryPanel = GetComponent<BatteryPanel>();
+        batteryNotifications = GetComponent<BatteryNotifications>();
     }
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
-        //Calcular porcentaje de bateria
-        currentBattery = timer.GetTimeRatio()*initialBattery;
+       
+        currentBattery = timer.GetTimeRatio() * initialBattery;
 
-        
+    
+        SendNotifications();
 
+    }
+
+    private void SendNotifications()
+    {
+        if (currentFase == batteryPercentNotifications.Count) { return; }
+
+        if (currentBattery <= batteryPercentNotifications[currentFase] + 1)
+        {
+            //desencadenar eventos
+            Debug.Log($"salto la notificacion del {batteryPercentNotifications[currentFase]}");
+            batteryNotifications.NotificationTrigger(currentFase);
+
+
+            currentFase++;
+        }
     }
 
     public int GetCurrentBattery()

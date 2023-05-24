@@ -102,7 +102,7 @@ public class MenuPausa : MonoBehaviour
     private void Update() 
     {   
         VolumeModifier(uIInputs.GetXNavigation());
-        Debug.Log(volume.value);   
+        //Debug.Log(volume.value);   
     }
 
   
