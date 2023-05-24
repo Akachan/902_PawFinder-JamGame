@@ -23,7 +23,10 @@ public class AppController : MonoBehaviour
         if(!cellphoneMover.GetScreenStete()) {return;}
         
         isCameraOn = !isCameraOn;
+
+        if (appCamera == null) {return;} 
         appCamera.SetActive(isCameraOn);
+
         if(isCameraOn)
         {
             timer.ChangeTimeSpeed(2);

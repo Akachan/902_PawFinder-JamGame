@@ -30,6 +30,8 @@ public class AppShooter : MonoBehaviour
     {
         if (!appController.GetCameraState()) { return; } //si la camara no está encendida
 
+        if(appCamera == null) {return;}
+
         if(!Physics.Raycast(appCamera.transform.position, appCamera.transform.forward, //si está muy lejos del objetivo
                             out hit, rangeCamera)) { return;}
 

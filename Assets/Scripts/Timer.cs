@@ -42,7 +42,7 @@ public class Timer : MonoBehaviour
 
     public void ChangeTimeSpeed(int state)
     {
-        batterySystem.SetArrows(state);
+        
         switch (state) 
         {
             
@@ -63,6 +63,7 @@ public class Timer : MonoBehaviour
                 break;
             
         }
+        batterySystem.SetArrows(state);
 
     }
 
@@ -77,12 +78,24 @@ public class Timer : MonoBehaviour
         else
         {
             timeSpeed = previousTimeSpeed;
+            batterySystem.SetArrows(GetState());
+            
+            
+
         }
     }
 
     public float GetTimeRatio()
     {
         return currentTime/initialTime;
+    }
+
+    private int GetState()
+    {
+        if(timeSpeed == normalTimeSpeed)        { return 0; }
+        else if(timeSpeed == fastTimeSpeed)     { return 1; }
+        else if(timeSpeed == superFastTimeSpeed){ return 2; }
+        else                                    { return 3; }
     }
 
 

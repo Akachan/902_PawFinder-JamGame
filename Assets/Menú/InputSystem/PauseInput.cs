@@ -6,15 +6,19 @@ using StarterAssets;
 
 public class PauseInput : MonoBehaviour, Control.IPauseActions
 {
-    [SerializeField] GameObject menuPausa;
+    [SerializeField] GameObject menuPausaGO;
     [SerializeField] InputCelu playerInput;
     [SerializeField] UIInputsMP uIInput;
     [SerializeField] FirstPersonController fps;
     [SerializeField] Timer timer;
     Control control;
+    MenuPausa menuPausa;
 
     bool isInPauseMenu = false;
     
+    private void Awake() {
+        menuPausa = menuPausaGO.GetComponent<MenuPausa>();
+    }
 
     private void Start()
     {
@@ -28,7 +32,7 @@ public class PauseInput : MonoBehaviour, Control.IPauseActions
         playerInput.gameObject.SetActive(!isInPauseMenu);
         uIInput.gameObject.SetActive(isInPauseMenu);
 
-        menuPausa.SetActive(isInPauseMenu);
+        menuPausaGO.SetActive(isInPauseMenu);
 
         
     }
@@ -45,9 +49,11 @@ public class PauseInput : MonoBehaviour, Control.IPauseActions
 
     public void SetPause()
     {
-        if(menuPausa.GetComponent<MenuPausa>().EscapeMenu()) {return;}
+        if(menuPausa.EscapeMenu()) {return;}
         
         isInPauseMenu = !isInPauseMenu;
+
+        if(playerInput == null) {return;}
 
         playerInput.gameObject.SetActive(!isInPauseMenu);   //esto desactiva el uso del celular
 
@@ -57,7 +63,7 @@ public class PauseInput : MonoBehaviour, Control.IPauseActions
 
         uIInput.gameObject.SetActive(isInPauseMenu);        //activa la navegacion ui
 
-        menuPausa.gameObject.SetActive(isInPauseMenu);      //se ve el menu
+        menuPausaGO.gameObject.SetActive(isInPauseMenu);      //se ve el menu
     }
 
 

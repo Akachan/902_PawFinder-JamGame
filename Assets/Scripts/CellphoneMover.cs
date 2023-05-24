@@ -68,6 +68,7 @@ public class CellphoneMover : MonoBehaviour
 
     public void initialMove()
     {
+        if (this == null) { return;}
         initialPos = transform.rotation;
         if(isUp)
         {

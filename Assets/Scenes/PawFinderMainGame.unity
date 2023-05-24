@@ -2752,6 +2752,18 @@ PrefabInstance:
       propertyPath: m_VerticalAlignment
       value: 512
       objectReference: {fileID: 0}
+    - target: {fileID: 1142212609, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142212609, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142212609, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1142212610, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: starterAssetsInputs
       value: 
@@ -2800,6 +2812,10 @@ PrefabInstance:
       propertyPath: m_VerticalAlignment
       value: 512
       objectReference: {fileID: 0}
+    - target: {fileID: 2106596407, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 25375fb621b44c0428d89a4b34d9c8c0, type: 2}
     - target: {fileID: 34727811346087212, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8834,7 +8850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9677a2998646034469edd4d2e606346d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuPausa: {fileID: 850805898}
+  menuPausaGO: {fileID: 850805898}
   playerInput: {fileID: 890826802}
   uIInput: {fileID: 901044401083278598}
   fps: {fileID: 5420857361722896710}
