@@ -17,6 +17,7 @@ public class Timer : MonoBehaviour
     {
         currentTime = initialTime;
         timeSpeed = normalTimeSpeed;
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
     }
 
 

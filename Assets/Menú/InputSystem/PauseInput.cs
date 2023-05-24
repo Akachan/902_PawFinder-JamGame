@@ -18,6 +18,9 @@ public class PauseInput : MonoBehaviour, Control.IPauseActions
 
     private void Start()
     {
+        
+        Cursor.visible = false;
+
         control = new Control();
         control.Pause.SetCallbacks(this);
         control.Pause.Enable();
@@ -56,4 +59,6 @@ public class PauseInput : MonoBehaviour, Control.IPauseActions
 
         menuPausa.gameObject.SetActive(isInPauseMenu);      //se ve el menu
     }
+
+
 }

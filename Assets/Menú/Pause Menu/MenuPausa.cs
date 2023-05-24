@@ -84,6 +84,9 @@ public class MenuPausa : MonoBehaviour
         volume.RegisterCallback<FocusOutEvent>(VolumeSliderOut);
 
         continueButton.Focus();
+
+       
+        UnityEngine.Cursor.visible = false;
         
     }
 
@@ -91,6 +94,7 @@ public class MenuPausa : MonoBehaviour
 
     private void Start() 
     {
+        
         continueButton.Focus();
         SetInvisible(exitCont);
         currentVolume = initialVolume;
@@ -100,6 +104,8 @@ public class MenuPausa : MonoBehaviour
         VolumeModifier(uIInputs.GetXNavigation());
         Debug.Log(volume.value);   
     }
+
+  
 
 
     //Play Button*****************************

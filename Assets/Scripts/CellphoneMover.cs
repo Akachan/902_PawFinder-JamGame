@@ -47,7 +47,7 @@ public class CellphoneMover : MonoBehaviour
     {
         if(!isMoving) {return;}
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, finalPos, speed);
+        transform.rotation = Quaternion.Lerp(transform.rotation, finalPos, speed* Time.deltaTime);
 
         if( transform.rotation == finalPos)
         {
@@ -56,6 +56,7 @@ public class CellphoneMover : MonoBehaviour
 
             // si llega a destino y se prende el celular por lo tanto empieza
             //el mayor consumo de bateria nivel 1
+
             if(isUp)
             {
                 SetCellOn();
