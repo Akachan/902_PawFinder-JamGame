@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d9d41f2592764458f89cca52d34c56, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  dialogueClip: {fileID: 8300000, guid: 58405b10a8d2d9f468abc1e74f9fe4d9, type: 3}
+  dialogueText: "hey, i think you wanna go home, let\xB4s go. They are waiting for
+    us"
+  captionTime: 5
